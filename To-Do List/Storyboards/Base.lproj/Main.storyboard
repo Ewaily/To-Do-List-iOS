@@ -60,6 +60,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="listTableView" destination="4gg-Kn-T9L" id="xMC-5y-D45"/>
+                        <segue destination="EGt-yb-VMP" kind="show" identifier="edit" id="Zsf-tb-RbC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,10 +104,11 @@
                         <viewLayoutGuide key="safeArea" id="HFh-oH-pDx"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="u3s-gk-fa8"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="todoSwitch" destination="iVi-hh-74E" id="sMq-ke-Wtm"/>
-                        <outlet property="todoTextField" destination="Epo-m0-aTm" id="1y0-Hi-zvL"/>
+                        <outlet property="todoSwitch" destination="iVi-hh-74E" id="ddC-63-HfM"/>
+                        <outlet property="todoTextField" destination="Epo-m0-aTm" id="Miv-Rt-uVI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOl-XC-iQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,4 +137,7 @@
             <point key="canvasLocation" x="75" y="96"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zsf-tb-RbC"/>
+    </inferredMetricsTieBreakers>
 </document>

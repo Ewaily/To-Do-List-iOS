@@ -11,6 +11,7 @@ import UIKit
 class ListTableView: UIViewController {
     @IBOutlet weak var listTableView: UITableView!
     let todos = RealmData.retrieveTasks()
+    var currentIndexPath = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         let taskXibFile = UINib(nibName: "TaskCell", bundle: nil)
@@ -46,9 +47,25 @@ extension ListTableView: UITableViewDataSource {
         return 100
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentIndexPath = indexPath.row
+        performSegue(withIdentifier: "edit", sender: self)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "edit" {
+            let editVC = segue.destination as! Task
+            editVC.editStatus = true
+            editVC.editTask = todos[currentIndexPath]
+            editVC.editTextField = todos[currentIndexPath].toDoText
+            editVC.editSwitch = todos[currentIndexPath].isDone
+        }
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            RealmData.deleteTask(Task: todos[indexPath.row])
+            RealmData.deleteTask(task: todos[indexPath.row])
             reload()
         }
     }

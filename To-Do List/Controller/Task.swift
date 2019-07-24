@@ -12,16 +12,36 @@ class Task: UIViewController {
 
     @IBOutlet weak var todoTextField: UITextField!
     @IBOutlet weak var todoSwitch: UISwitch!
+    var editStatus = false
+    var editTextField = ""
+    var editSwitch = false
+    var editTask: TodoTask?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.save, target: self, action: #selector(saveButtonAction)), animated: true)
+        if editStatus{
+            updateEditDisplay()
+        }
     }
     
     @objc func saveButtonAction() {
-        RealmData.addTasks(text: todoTextField.text!, isDoneSwitch: todoSwitch.isOn)
-        navigationController?.popViewController(animated: true)
+        if editStatus {
+            editTextField = todoTextField.text!
+            editSwitch = todoSwitch.isOn
+            RealmData.editTask(task: editTask!, updatedText: editTextField, updatedStatus: editSwitch)
+            navigationController?.popViewController(animated: true)
+        }
+        else {
+            RealmData.addTask(text: todoTextField.text!, isDoneSwitch: todoSwitch.isOn)
+            navigationController?.popViewController(animated: true)
+        }
+        
     }
     
-    
+    func updateEditDisplay(){
+        todoTextField.text = editTextField
+        todoSwitch.setOn(editSwitch, animated: true)
+    }
 }
 
