@@ -10,7 +10,7 @@ import UIKit
 
 class ListTableView: UIViewController {
     @IBOutlet weak var listTableView: UITableView!
-    let todos = RealmData.retriveTasks()
+    let todos = RealmData.retrieveTasks()
     override func viewDidLoad() {
         super.viewDidLoad()
         let taskXibFile = UINib(nibName: "TaskCell", bundle: nil)
@@ -44,6 +44,13 @@ extension ListTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            RealmData.deleteTask(Task: todos[indexPath.row])
+            reload()
+        }
     }
 }
 

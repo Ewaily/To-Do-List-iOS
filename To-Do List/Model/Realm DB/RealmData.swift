@@ -24,9 +24,16 @@ class RealmData: Object {
 
     }
     
-     class func retriveTasks() -> Results<TodoTask>{
+     class func retrieveTasks() -> Results<TodoTask>{
         let realm = try! Realm()
         let tasks = realm.objects(TodoTask.self)
         return tasks
+    }
+    
+    class func deleteTask(Task: TodoTask){
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(Task)
+        }
     }
 }

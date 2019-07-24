@@ -16,7 +16,7 @@
 		108E6C6722E87C3B008B1452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108E6C6522E87C3B008B1452 /* LaunchScreen.storyboard */; };
 		10B7E3D522E894AB0060FB5D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B7E3D422E894AB0060FB5D /* Task.swift */; };
 		10B7E3D822E89AAE0060FB5D /* TodoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B7E3D722E89AAE0060FB5D /* TodoTask.swift */; };
-		10B7E3DA22E89FCA0060FB5D /* RealmTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B7E3D922E89FCA0060FB5D /* RealmTodo.swift */; };
+		10B7E3DA22E89FCA0060FB5D /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B7E3D922E89FCA0060FB5D /* RealmData.swift */; };
 		34E1F6470F844C7F2044A46D /* Pods_To_Do_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026C6ECF5B18F836FE9C9198 /* Pods_To_Do_List.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,7 @@
 		108E6C6822E87C3B008B1452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10B7E3D422E894AB0060FB5D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		10B7E3D722E89AAE0060FB5D /* TodoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTask.swift; sourceTree = "<group>"; };
-		10B7E3D922E89FCA0060FB5D /* RealmTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTodo.swift; sourceTree = "<group>"; };
+		10B7E3D922E89FCA0060FB5D /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
 		C7F7E9FBDFD33B3379C6D43F /* Pods-To-Do List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-Do List.debug.xcconfig"; path = "Target Support Files/Pods-To-Do List/Pods-To-Do List.debug.xcconfig"; sourceTree = "<group>"; };
 		EB9D3B1271C49FFFD82E8D3B /* Pods-To-Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-Do List.release.xcconfig"; path = "Target Support Files/Pods-To-Do List/Pods-To-Do List.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +145,7 @@
 		10B7E3D622E89A950060FB5D /* Realm DB */ = {
 			isa = PBXGroup;
 			children = (
-				10B7E3D922E89FCA0060FB5D /* RealmTodo.swift */,
+				10B7E3D922E89FCA0060FB5D /* RealmData.swift */,
 			);
 			path = "Realm DB";
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 				108E6C5F22E87C39008B1452 /* ListTableView.swift in Sources */,
 				10B7E3D822E89AAE0060FB5D /* TodoTask.swift in Sources */,
 				10785BB822E87E9B005CC542 /* TaskCell.swift in Sources */,
-				10B7E3DA22E89FCA0060FB5D /* RealmTodo.swift in Sources */,
+				10B7E3DA22E89FCA0060FB5D /* RealmData.swift in Sources */,
 				10B7E3D522E894AB0060FB5D /* Task.swift in Sources */,
 				108E6C5D22E87C39008B1452 /* AppDelegate.swift in Sources */,
 			);
