@@ -11,7 +11,7 @@ import UIKit
 
 class ListTableView: UIViewController {
     
-    @IBOutlet var listTableView: UITableView!
+    @IBOutlet private var listTableView: UITableView!
     let todos = RealmData.retrieveTasks()
     var currentIndexPath = 0
     
@@ -27,7 +27,7 @@ class ListTableView: UIViewController {
         reload()
     }
     
-    func reload() {
+    private func reload() {
         listTableView.reloadData()
     }
 }
@@ -70,8 +70,7 @@ extension ListTableView: UITableViewDataSource {
         if editingStyle == .delete {
             RealmData.deleteTask(task: todos[indexPath.row])
             reload()
-            let banner = StatusBarNotificationBanner(title: "Task deleted", style: .danger)
-            banner.show()
+            showNotificationBannerSwift(bannerTitle: "Task deleted", bannerStyle: .danger)
         }
     }
 }

@@ -11,8 +11,8 @@ import UIKit
 
 class UpdatedTask: UIViewController {
     
-    @IBOutlet var todoTextField: UITextField!
-    @IBOutlet var todoSwitch: UISwitch!
+    @IBOutlet private var todoTextField: UITextField!
+    @IBOutlet private var todoSwitch: UISwitch!
     var editTextField = ""
     var editSwitch = false
     var editTask: TodoTask?
@@ -23,17 +23,15 @@ class UpdatedTask: UIViewController {
         updateEditDisplay()
     }
     
-    @objc func saveButtonAction() {
+    @objc private func saveButtonAction() {
             editTextField = todoTextField.text!
             editSwitch = todoSwitch.isOn
             RealmData.editTask(task: editTask!, updatedText: editTextField, updatedStatus: editSwitch)
             navigationController?.popViewController(animated: true)
-            
-            let banner = StatusBarNotificationBanner(title: "Modified successfully!", style: .success)
-            banner.show()
+            showNotificationBannerSwift(bannerTitle: "Modified successfully!", bannerStyle: .success)
     }
     
-    func updateEditDisplay() {
+    private func updateEditDisplay() {
         todoTextField.text = editTextField
         todoSwitch.setOn(editSwitch, animated: true)
     }

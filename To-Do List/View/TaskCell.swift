@@ -11,9 +11,9 @@ import UIKit
 
 class TaskCell: UITableViewCell {
     
-    @IBOutlet var todoText: UILabel!
-    @IBOutlet var isDoneButton: UIButton!
-    @IBOutlet var taskContentView: AnimatableView!
+    @IBOutlet private var todoText: UILabel!
+    @IBOutlet private var isDoneButton: UIButton!
+    @IBOutlet private var taskContentView: AnimatableView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

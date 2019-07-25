@@ -11,18 +11,17 @@ import UIKit
 
 class NewTask: UIViewController {
     
-    @IBOutlet var todoTextField: UITextField!
+    @IBOutlet private var todoTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.save, target: self, action: #selector(saveButtonAction)), animated: true)
     }
     
-    @objc func saveButtonAction() {
-            RealmData.addTask(text: todoTextField.text!)
-            navigationController?.popViewController(animated: true)
-            let banner = StatusBarNotificationBanner(title: "Task added!", style: .success)
-            banner.show()
+    @objc private func saveButtonAction() {
+        RealmData.addTask(text: todoTextField.text!)
+        navigationController?.popViewController(animated: true)
+        showNotificationBannerSwift(bannerTitle: "Task added!", bannerStyle: .success)
     }
 }
 

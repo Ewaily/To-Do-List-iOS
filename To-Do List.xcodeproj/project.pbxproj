@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		106884EE22E9CF23006D4E53 /* UpdatedTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106884ED22E9CF23006D4E53 /* UpdatedTask.swift */; };
+		106E30B522E9D6A2002D9B25 /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106E30B422E9D6A2002D9B25 /* NotificationBanner.swift */; };
 		10785BB822E87E9B005CC542 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10785BB622E87E9B005CC542 /* TaskCell.swift */; };
 		10785BB922E87E9B005CC542 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10785BB722E87E9B005CC542 /* TaskCell.xib */; };
 		108E6C5D22E87C39008B1452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108E6C5C22E87C39008B1452 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		026C6ECF5B18F836FE9C9198 /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		106884ED22E9CF23006D4E53 /* UpdatedTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatedTask.swift; sourceTree = "<group>"; };
+		106E30B422E9D6A2002D9B25 /* NotificationBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
 		10785BB622E87E9B005CC542 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		10785BB722E87E9B005CC542 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 		108E6C5922E87C39008B1452 /* To-Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		106E30B322E9D634002D9B25 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				106E30B422E9D6A2002D9B25 /* NotificationBanner.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		10785BAD22E87CE5005CC542 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +144,7 @@
 		108E6C5B22E87C39008B1452 /* To-Do List */ = {
 			isa = PBXGroup;
 			children = (
+				106E30B322E9D634002D9B25 /* Global */,
 				10785BB022E87D02005CC542 /* Application Delegate */,
 				10785BAD22E87CE5005CC542 /* Model */,
 				10785BAE22E87CF1005CC542 /* View */,
@@ -286,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106E30B522E9D6A2002D9B25 /* NotificationBanner.swift in Sources */,
 				108E6C5F22E87C39008B1452 /* ListTableView.swift in Sources */,
 				106884EE22E9CF23006D4E53 /* UpdatedTask.swift in Sources */,
 				10B7E3D822E89AAE0060FB5D /* TodoTask.swift in Sources */,
