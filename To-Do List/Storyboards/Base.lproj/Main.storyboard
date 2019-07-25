@@ -60,45 +60,33 @@
                     </navigationItem>
                     <connections>
                         <outlet property="listTableView" destination="4gg-Kn-T9L" id="xMC-5y-D45"/>
-                        <segue destination="EGt-yb-VMP" kind="show" identifier="edit" id="Zsf-tb-RbC"/>
+                        <segue destination="GTC-Xp-I0E" kind="show" identifier="edit" id="Fyl-ap-MK5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="95.758928571428569"/>
         </scene>
-        <!--Task-->
+        <!--New Task-->
         <scene sceneID="sPS-jc-BaU">
             <objects>
-                <viewController id="EGt-yb-VMP" customClass="Task" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EGt-yb-VMP" customClass="NewTask" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YGS-6t-3jm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert to-do text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Epo-m0-aTm">
-                                <rect key="frame" x="20" y="188" width="374" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Insert to-do text" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Epo-m0-aTm">
+                                <rect key="frame" x="20" y="138" width="374" height="575"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iVi-hh-74E">
-                                <rect key="frame" x="182.5" y="432.5" width="51" height="31"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have you done it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJq-2X-ojZ">
-                                <rect key="frame" x="139" y="381.5" width="136.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Epo-m0-aTm" secondAttribute="trailing" id="5FZ-VI-G8v"/>
-                            <constraint firstItem="vJq-2X-ojZ" firstAttribute="centerX" secondItem="YGS-6t-3jm" secondAttribute="centerX" id="FX9-zL-tlr"/>
-                            <constraint firstItem="iVi-hh-74E" firstAttribute="top" secondItem="vJq-2X-ojZ" secondAttribute="bottom" constant="30" id="Obg-gJ-ldZ"/>
-                            <constraint firstItem="iVi-hh-74E" firstAttribute="centerX" secondItem="YGS-6t-3jm" secondAttribute="centerX" id="P7I-Kw-2OH"/>
-                            <constraint firstItem="Epo-m0-aTm" firstAttribute="top" secondItem="HFh-oH-pDx" secondAttribute="top" constant="100" id="Rhw-IU-Pvp"/>
-                            <constraint firstItem="iVi-hh-74E" firstAttribute="centerY" secondItem="YGS-6t-3jm" secondAttribute="centerY" id="YVK-7Y-0v1"/>
+                            <constraint firstItem="HFh-oH-pDx" firstAttribute="bottom" secondItem="Epo-m0-aTm" secondAttribute="bottom" constant="100" id="FM5-vU-mHG"/>
+                            <constraint firstItem="Epo-m0-aTm" firstAttribute="top" secondItem="HFh-oH-pDx" secondAttribute="top" constant="50" id="Rhw-IU-Pvp"/>
                             <constraint firstItem="Epo-m0-aTm" firstAttribute="leading" secondItem="YGS-6t-3jm" secondAttribute="leadingMargin" id="r4K-FR-cL2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HFh-oH-pDx"/>
@@ -107,7 +95,6 @@
                     <navigationItem key="navigationItem" id="u3s-gk-fa8"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="todoSwitch" destination="iVi-hh-74E" id="ddC-63-HfM"/>
                         <outlet property="todoTextField" destination="Epo-m0-aTm" id="Miv-Rt-uVI"/>
                     </connections>
                 </viewController>
@@ -136,8 +123,53 @@
             </objects>
             <point key="canvasLocation" x="75" y="96"/>
         </scene>
+        <!--Updated Task-->
+        <scene sceneID="5d8-cD-en1">
+            <objects>
+                <viewController id="GTC-Xp-I0E" customClass="UpdatedTask" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FQb-v9-Zje">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert to-do text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O06-pO-pmJ">
+                                <rect key="frame" x="20" y="188" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jwg-QY-Gzo">
+                                <rect key="frame" x="182.5" y="432.5" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have you done it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67g-d1-wxC">
+                                <rect key="frame" x="139" y="381.5" width="136.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O06-pO-pmJ" firstAttribute="top" secondItem="mLY-I1-Ojp" secondAttribute="top" constant="100" id="4zU-hH-B9j"/>
+                            <constraint firstItem="67g-d1-wxC" firstAttribute="centerX" secondItem="FQb-v9-Zje" secondAttribute="centerX" id="93N-s1-ifB"/>
+                            <constraint firstItem="jwg-QY-Gzo" firstAttribute="centerY" secondItem="FQb-v9-Zje" secondAttribute="centerY" id="Bzi-Ko-Qbv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O06-pO-pmJ" secondAttribute="trailing" id="HBC-hJ-kjo"/>
+                            <constraint firstItem="jwg-QY-Gzo" firstAttribute="top" secondItem="67g-d1-wxC" secondAttribute="bottom" constant="30" id="ZeT-2i-OFH"/>
+                            <constraint firstItem="jwg-QY-Gzo" firstAttribute="centerX" secondItem="FQb-v9-Zje" secondAttribute="centerX" id="hGU-aM-vtv"/>
+                            <constraint firstItem="O06-pO-pmJ" firstAttribute="leading" secondItem="FQb-v9-Zje" secondAttribute="leadingMargin" id="lSl-xm-BHV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mLY-I1-Ojp"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PFG-Dg-0uD"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="todoSwitch" destination="jwg-QY-Gzo" id="YdA-qk-VOl"/>
+                        <outlet property="todoTextField" destination="O06-pO-pmJ" id="pc8-WN-W91"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38G-Ee-Jww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="843"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Zsf-tb-RbC"/>
-    </inferredMetricsTieBreakers>
 </document>

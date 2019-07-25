@@ -59,8 +59,7 @@ extension ListTableView: UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "edit" {
-            let editVC = segue.destination as! Task
-            editVC.editStatus = true
+            let editVC = segue.destination as! UpdatedTask
             editVC.editTask = todos[currentIndexPath]
             editVC.editTextField = todos[currentIndexPath].toDoText
             editVC.editSwitch = todos[currentIndexPath].isDone

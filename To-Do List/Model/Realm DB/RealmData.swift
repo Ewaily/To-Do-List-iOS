@@ -11,14 +11,14 @@ import RealmSwift
 
 class RealmData: Object {
     
-    class func addTask(text: String, isDoneSwitch: Bool) {
+    class func addTask(text: String) {
         
         let realm = try! Realm()
         try! realm.write {
             let todo = TodoTask()
             todo.id = incrementID()
             todo.toDoText = text
-            todo.isDone = isDoneSwitch
+            todo.isDone = false
             realm.add(todo, update: .modified)
         }
         print(Realm.Configuration.defaultConfiguration.fileURL!)
@@ -34,14 +34,6 @@ class RealmData: Object {
         let realm = try! Realm()
         try! realm.write {
             task.toDoText = updatedText
-            task.isDone = updatedStatus
-        }
-    }
-    
-    class func editTask(task: TodoTask, updatedStatus: Bool) {
-        
-        let realm = try! Realm()
-        try! realm.write {
             task.isDone = updatedStatus
         }
     }

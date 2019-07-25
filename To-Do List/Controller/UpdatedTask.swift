@@ -9,11 +9,10 @@
 import NotificationBannerSwift
 import UIKit
 
-class Task: UIViewController {
+class UpdatedTask: UIViewController {
     
     @IBOutlet var todoTextField: UITextField!
     @IBOutlet var todoSwitch: UISwitch!
-    var editStatus = false
     var editTextField = ""
     var editSwitch = false
     var editTask: TodoTask?
@@ -21,13 +20,10 @@ class Task: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.save, target: self, action: #selector(saveButtonAction)), animated: true)
-        if editStatus {
-            updateEditDisplay()
-        }
+        updateEditDisplay()
     }
     
     @objc func saveButtonAction() {
-        if editStatus {
             editTextField = todoTextField.text!
             editSwitch = todoSwitch.isOn
             RealmData.editTask(task: editTask!, updatedText: editTextField, updatedStatus: editSwitch)
@@ -35,13 +31,6 @@ class Task: UIViewController {
             
             let banner = StatusBarNotificationBanner(title: "Modified successfully!", style: .success)
             banner.show()
-        }
-        else {
-            RealmData.addTask(text: todoTextField.text!, isDoneSwitch: todoSwitch.isOn)
-            navigationController?.popViewController(animated: true)
-            let banner = StatusBarNotificationBanner(title: "Task added!", style: .success)
-            banner.show()
-        }
     }
     
     func updateEditDisplay() {
@@ -49,4 +38,6 @@ class Task: UIViewController {
         todoSwitch.setOn(editSwitch, animated: true)
     }
 }
+
+
 
