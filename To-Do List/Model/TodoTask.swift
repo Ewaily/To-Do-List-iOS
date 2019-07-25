@@ -10,10 +10,11 @@ import Foundation
 import RealmSwift
 
 class TodoTask: Object {
+    
     @objc dynamic var id = 0
     @objc dynamic var toDoText = ""
     @objc dynamic var isDone = false
-    
+
     override static func primaryKey() -> String? {
         return "id"
     }

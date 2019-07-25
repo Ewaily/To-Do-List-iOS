@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Table View-->
+        <!--All Tasks-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ListTableView" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hWG-av-GWb">
+                    <navigationItem key="navigationItem" title="All Tasks" id="hWG-av-GWb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G45-pw-3rU">
                             <connections>
                                 <segue destination="EGt-yb-VMP" kind="show" id="wQ0-Rh-b9K"/>

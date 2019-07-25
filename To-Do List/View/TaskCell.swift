@@ -6,20 +6,26 @@
 //  Copyright © 2019 Muhammad Ewaily. All rights reserved.
 //
 
+import IBAnimatable
 import UIKit
 
 class TaskCell: UITableViewCell {
-
-    @IBOutlet weak var todoText: UILabel!
-    @IBOutlet weak var isDoneText: UILabel!
+    
+    @IBOutlet var todoText: UILabel!
+    @IBOutlet var isDoneButton: UIButton!
+    @IBOutlet var taskContentView: AnimatableView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configureCell(Text: String, Status: String) {
-        todoText.text = Text
-        isDoneText.text = Status
+    func configureCell(text: String, status: Bool) {
+        todoText.text = text
+        if status {
+            isDoneButton.setImage(#imageLiteral(resourceName: "Checkedbox"), for: .normal)
+        }
+        else {
+            isDoneButton.setImage(#imageLiteral(resourceName: "Uncheckedbox"), for: .normal)
+        }
     }
-    
 }
