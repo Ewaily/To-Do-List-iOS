@@ -11,7 +11,7 @@ import UIKit
 
 class NewTask: UIViewController {
     
-    @IBOutlet private var todoTextField: UITextField!
+    @IBOutlet weak var todoTextField: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,8 +23,8 @@
                         <rect key="frame" x="12" y="12" width="331" height="56.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="task" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P9-b6-7pb">
-                                <rect key="frame" x="15" y="3" width="198.5" height="50.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="15" y="3" width="248.5" height="50.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,7 +43,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0P9-b6-7pb" firstAttribute="width" secondItem="0Am-eP-Cl0" secondAttribute="width" multiplier="0.6" id="7v9-Di-9hw"/>
+                            <constraint firstItem="0P9-b6-7pb" firstAttribute="width" secondItem="0Am-eP-Cl0" secondAttribute="width" multiplier="0.75" id="7v9-Di-9hw"/>
                             <constraint firstAttribute="trailing" secondItem="7wi-eW-Rlp" secondAttribute="trailing" constant="15" id="FSq-aM-XW8"/>
                             <constraint firstItem="0P9-b6-7pb" firstAttribute="leading" secondItem="0Am-eP-Cl0" secondAttribute="leading" constant="15" id="GfC-97-Ha5"/>
                             <constraint firstItem="0P9-b6-7pb" firstAttribute="top" secondItem="0Am-eP-Cl0" secondAttribute="top" constant="3" id="PTY-AG-8Sq"/>

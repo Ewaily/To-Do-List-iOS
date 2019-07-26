@@ -11,7 +11,7 @@ import UIKit
 
 class UpdatedTask: UIViewController {
     
-    @IBOutlet private var todoTextField: UITextField!
+    @IBOutlet weak var todoTextField: UITextView!
     @IBOutlet private var todoSwitch: UISwitch!
     var editTextField = ""
     var editSwitch = false

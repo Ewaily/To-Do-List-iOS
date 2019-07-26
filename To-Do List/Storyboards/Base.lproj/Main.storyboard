@@ -75,19 +75,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Insert to-do text" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Epo-m0-aTm">
-                                <rect key="frame" x="20" y="138" width="374" height="575"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSY-PQ-FjT">
+                                <rect key="frame" x="15" y="150" width="384" height="563"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert to-do task below" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8W-yg-vfc">
+                                <rect key="frame" x="15" y="118" width="235" height="17"/>
+                                <fontDescription key="fontDescription" name="Courier-BoldOblique" family="Courier" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Epo-m0-aTm" secondAttribute="trailing" id="5FZ-VI-G8v"/>
-                            <constraint firstItem="HFh-oH-pDx" firstAttribute="bottom" secondItem="Epo-m0-aTm" secondAttribute="bottom" constant="100" id="FM5-vU-mHG"/>
-                            <constraint firstItem="Epo-m0-aTm" firstAttribute="top" secondItem="HFh-oH-pDx" secondAttribute="top" constant="50" id="Rhw-IU-Pvp"/>
-                            <constraint firstItem="Epo-m0-aTm" firstAttribute="leading" secondItem="YGS-6t-3jm" secondAttribute="leadingMargin" id="r4K-FR-cL2"/>
+                            <constraint firstItem="fSY-PQ-FjT" firstAttribute="top" secondItem="k8W-yg-vfc" secondAttribute="bottom" constant="15" id="3i8-6S-Ixe"/>
+                            <constraint firstItem="HFh-oH-pDx" firstAttribute="bottom" secondItem="fSY-PQ-FjT" secondAttribute="bottom" constant="100" id="Bfu-G9-mo2"/>
+                            <constraint firstItem="k8W-yg-vfc" firstAttribute="leading" secondItem="HFh-oH-pDx" secondAttribute="leading" constant="15" id="JXY-gQ-xXh"/>
+                            <constraint firstItem="HFh-oH-pDx" firstAttribute="trailing" secondItem="fSY-PQ-FjT" secondAttribute="trailing" constant="15" id="KdC-5S-m0F"/>
+                            <constraint firstItem="k8W-yg-vfc" firstAttribute="top" secondItem="HFh-oH-pDx" secondAttribute="top" constant="30" id="U3a-Fj-74e"/>
+                            <constraint firstItem="fSY-PQ-FjT" firstAttribute="leading" secondItem="HFh-oH-pDx" secondAttribute="leading" constant="15" id="nF0-Nf-Pkk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HFh-oH-pDx"/>
                     </view>
@@ -95,7 +103,7 @@
                     <navigationItem key="navigationItem" id="u3s-gk-fa8"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="todoTextField" destination="Epo-m0-aTm" id="Miv-Rt-uVI"/>
+                        <outlet property="todoTextField" destination="fSY-PQ-FjT" id="axl-HS-RlP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOl-XC-iQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,31 +139,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert to-do text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O06-pO-pmJ">
-                                <rect key="frame" x="20" y="188" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jwg-QY-Gzo">
-                                <rect key="frame" x="182.5" y="432.5" width="51" height="31"/>
+                                <rect key="frame" x="182.5" y="431.5" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have you done it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67g-d1-wxC">
-                                <rect key="frame" x="139" y="381.5" width="136.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="120" y="381.5" width="174" height="20"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQl-cz-Ead">
+                                <rect key="frame" x="15" y="168" width="384" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="b0e-wY-JUu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="O06-pO-pmJ" firstAttribute="top" secondItem="mLY-I1-Ojp" secondAttribute="top" constant="100" id="4zU-hH-B9j"/>
-                            <constraint firstItem="67g-d1-wxC" firstAttribute="centerX" secondItem="FQb-v9-Zje" secondAttribute="centerX" id="93N-s1-ifB"/>
-                            <constraint firstItem="jwg-QY-Gzo" firstAttribute="centerY" secondItem="FQb-v9-Zje" secondAttribute="centerY" id="Bzi-Ko-Qbv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="O06-pO-pmJ" secondAttribute="trailing" id="HBC-hJ-kjo"/>
-                            <constraint firstItem="jwg-QY-Gzo" firstAttribute="top" secondItem="67g-d1-wxC" secondAttribute="bottom" constant="30" id="ZeT-2i-OFH"/>
-                            <constraint firstItem="jwg-QY-Gzo" firstAttribute="centerX" secondItem="FQb-v9-Zje" secondAttribute="centerX" id="hGU-aM-vtv"/>
-                            <constraint firstItem="O06-pO-pmJ" firstAttribute="leading" secondItem="FQb-v9-Zje" secondAttribute="leadingMargin" id="lSl-xm-BHV"/>
+                            <constraint firstItem="TQl-cz-Ead" firstAttribute="leading" secondItem="mLY-I1-Ojp" secondAttribute="leading" constant="15" id="5cg-QQ-JQ3"/>
+                            <constraint firstItem="mLY-I1-Ojp" firstAttribute="trailing" secondItem="TQl-cz-Ead" secondAttribute="trailing" constant="15" id="Izi-qL-tn1"/>
+                            <constraint firstItem="TQl-cz-Ead" firstAttribute="top" secondItem="mLY-I1-Ojp" secondAttribute="top" constant="80" id="Y5f-8K-sg3"/>
+                            <constraint firstItem="jwg-QY-Gzo" firstAttribute="centerX" secondItem="FQb-v9-Zje" secondAttribute="centerX" id="sR7-bF-Fs9"/>
+                            <constraint firstItem="67g-d1-wxC" firstAttribute="top" secondItem="TQl-cz-Ead" secondAttribute="bottom" constant="85.5" id="uTr-4H-Lfh"/>
+                            <constraint firstItem="jwg-QY-Gzo" firstAttribute="top" secondItem="67g-d1-wxC" secondAttribute="bottom" constant="30" id="vdb-RC-6in"/>
+                            <constraint firstItem="67g-d1-wxC" firstAttribute="centerX" secondItem="FQb-v9-Zje" secondAttribute="centerX" id="yRU-ya-rhl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mLY-I1-Ojp"/>
                     </view>
@@ -164,7 +175,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="todoSwitch" destination="jwg-QY-Gzo" id="YdA-qk-VOl"/>
-                        <outlet property="todoTextField" destination="O06-pO-pmJ" id="pc8-WN-W91"/>
+                        <outlet property="todoTextField" destination="TQl-cz-Ead" id="vYs-je-nB1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38G-Ee-Jww" userLabel="First Responder" sceneMemberID="firstResponder"/>
